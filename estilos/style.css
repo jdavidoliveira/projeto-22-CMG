@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #D50100;
+}
+
+h1{
+    text-align: center;
+}
+h3 { 
+    text-align: center;
+}
+
+/*
+#D50100 - red
+#EEEEEE - gray
+*/
