@@ -4,11 +4,26 @@
     --cor1: #D50100;
 }
 
+body {
+    position: fixed;
+    width: 100vw;
+}
+
+nav {
+    width: 100vw;
+}
+
 h1{
     text-align: center;
 }
+
 h3 { 
     text-align: center;
+}
+
+form {
+    width: 80vw;
+    margin: auto;
 }
 
 /*
