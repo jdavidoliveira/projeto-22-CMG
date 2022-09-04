@@ -4,25 +4,21 @@
     --cor1: #D50100;
 }
 
-body {
-    position: fixed;
+header {
     width: 100vw;
+    margin-bottom: 20px;
 }
 
-nav {
-    width: 100vw;
+#imagem_header {
+    border-radius: 10px;
 }
 
-h1{
-    text-align: center;
-}
-
-h3 { 
+h1, h3 {
     text-align: center;
 }
 
 form {
-    width: 80vw;
+    width: 70vw;
     margin: auto;
 }
 
