@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Caxias medical Group</title>
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/style.css">
 </head>
@@ -14,13 +14,15 @@
     <header>
         <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand" href="#">
-                <img src="imagens/logo-full_size.jpeg" width="100" id="imagem_header" class="d-inline-block align-top" alt="logo da empresa">
+                <img src="imagens/logo-full_size.jpeg" id="imagem_header" class="d-inline-block align-top" alt="logo da empresa">
             </a>
         </nav>
     </header>
     <main>
-        <h1>Sistema de Cadastro de Funcionario</h1>
-        <h3>Ficha cadastral de funcionário da empresa</h3>
+        <section id="main_header">
+            <h1>Sistema de Cadastro de Funcionario</h1>
+            <h3>Ficha cadastral de funcionário da empresa</h3>
+        </section>
         <hr>
         <section>
             <form id="form">
@@ -60,10 +62,9 @@
                     <label for="Remuneração" class="col-md-2">Remuneração:</label>
                     <input type="number" id="remuneracao" class="col-md-10" placeholder="Digite a Remuneração do Funcionário"><br>
                 </div>
-        
                 <div class="form-group row">
                     <label for="Observações" class="col-md-2">Observações:</label>
-                    <input type="text" id="observacoes" class="col-md-10" placeholder="Digite informações extras importantes"><br>
+                    <input type="text" id="observacoes" class="col-md-10" placeholder="Digite informações extras importantes:"><br>
                 </div>
             </form>
         </section>

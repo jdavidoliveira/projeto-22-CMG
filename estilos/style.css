@@ -1,7 +1,13 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --cor1: #D50100;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bolder;
 }
 
 header {
@@ -11,15 +17,21 @@ header {
 
 #imagem_header {
     border-radius: 10px;
+    width: 100px;
 }
 
-h1, h3 {
+section#main_header {
     text-align: center;
 }
 
 form {
     width: 70vw;
     margin: auto;
+}
+
+input#observacoes {
+    padding-top: 7px;
+    padding-bottom: 100px;
 }
 
 /*
