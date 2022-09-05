@@ -20,6 +20,25 @@ header {
     width: 100px;
 }
 
+a#nav_link {
+    font-size: 20px;
+    color: var(--cor1);
+}
+
+a#nav_link:hover {
+    color: var(--cor1);
+    text-decoration: none;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
 section#main_header {
     text-align: center;
 }
@@ -32,6 +51,11 @@ form {
 input#observacoes {
     padding-top: 7px;
     padding-bottom: 100px;
+}
+
+footer {
+    margin: 50px auto 0 auto;
+    text-align: center;
 }
 
 /*

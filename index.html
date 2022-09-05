@@ -13,9 +13,11 @@
 <body>
     <header>
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="imagens/logo-full_size.jpeg" id="imagem_header" class="d-inline-block align-top" alt="logo da empresa">
+            <a class="navbar navbar-expand-lg" id="nav_link" href="#">
+                <img src="imagens/logo-full_size.jpeg" id="imagem_header" class="navbar-brand d-inline-block align-top" alt="logo da empresa">
+                Caxias Online Medical Group
             </a>
+
         </nav>
     </header>
     <main>
@@ -28,51 +30,61 @@
             <form id="form">
                 <div class="form-group row">
                     <label for="Nome Completo": class="col-md-2">Nome Completo:</label>
-                    <input type="text" id="nome" class="col-md-10" placeholder="Digite o nome completo do Funcionário" pattern=""><br>
+                    <input type="text" id="nome" class="col-md-10" placeholder="Digite o nome completo do Funcionário" pattern="">
                 </div>
                 <div class="form-group row">
                     <label for="CPF" class="col-md-2">CPF:</label>
-                    <input type="text" id="CPF" class="col-md-10" placeholder="Digite o CPF do Funcionário" autocomplete="off" maxlength="14"><br>
+                    <input type="number" id="CPF" class="col-md-10" placeholder="Digite o CPF do Funcionário" autocomplete="off" maxlength="14">
                 </div>
                 <div class="form-group row">
                     <label for="E-mail" class="col-md-2">Email:</label>
-                    <input type="text" id="email" class="col-md-10" placeholder="Digite o E-mail do Funcionário"><br>
+                    <input type="text" id="email" class="col-md-10" placeholder="Digite o E-mail do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Endereço" class="col-md-2">Endereço:</label>
-                    <input type="text" id="endereco" class="col-md-10" placeholder="Digite o endereço do Funcionário"><br>
+                    <input type="text" id="endereco" class="col-md-10" placeholder="Digite o endereço do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Número de Telefone"class="col-md-2">Número de Telefone:</label>
-                    <input type="text" id="numero" class="col-md-10" placeholder="Digite o número de telefone do Funcionário"><br>
+                    <input type="text" id="numero" class="col-md-10" placeholder="Digite o número de telefone do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Pessoa de contato" class="col-md-2">Pessoa de contato:</label>
-                    <input type="text" id="pessoa_contato" class="col-md-10" placeholder="Digite uma pessoa para contato"><br>
+                    <input type="text" id="pessoa_contato" class="col-md-10" placeholder="Digite uma pessoa para contato">
                 </div>
                 <div class="form-group row">
                     <label for="Cargo" class="col-md-2">Cargo:</label>
-                    <input type="text" id="cargo" class="col-md-10" placeholder="Digite o cargo do Funcionário"><br>
+                    <input type="text" id="cargo" class="col-md-10" placeholder="Digite o cargo do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="data" class="col-md-2">Data de admissão:</label>
-                    <input type="date" id="data" class="col-md-10"><br>
+                    <input type="date" id="data" class="col-md-10">
                 </div>
                 <div class="form-group row">
                     <label for="Remuneração" class="col-md-2">Remuneração:</label>
-                    <input type="number" id="remuneracao" class="col-md-10" placeholder="Digite a Remuneração do Funcionário"><br>
+                    <input type="number" id="remuneracao" class="col-md-10" placeholder="Digite a Remuneração do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Observações" class="col-md-2">Observações:</label>
-                    <input type="text" id="observacoes" class="col-md-10" placeholder="Digite informações extras importantes:"><br>
+                    <input type="text" id="observacoes" class="col-md-10" placeholder="Digite informações extras importantes:">
                 </div>
+                <div class="form-group row">
+                    <label for="foto" class="col-md-2">Foto de funcionário:</label>
+                    <input type="file" id="foto" class="col-md-10">
+                </div>
+                <input type="button" class="btn btn-primary" id="cadastrar" value="Cadastrar">
+                <input type="button" class="btn btn-primary" id="consultar" value="Consultar">
             </form>
         </section>
     </main>
     <footer>
-
+        <p>Site criado por <a href=""> &copy;David</a> , <a href="">&copy;Andrade</a> , <a href="">&copy;Yago</a></p>
     </footer>   
     
-    <!--Cargos-->
+    <!--
+        Cargos:
+        Cirurgião Geral
+        Enfermeiro
+    -->
 </body>
 </html>
