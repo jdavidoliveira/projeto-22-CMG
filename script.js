@@ -18,22 +18,26 @@ $(document).ready(function(){
     //cadastrar 
     cadastrar_button.addEventListener("click", function(e){
         e.preventDefault();
-        let funcionario_dados = {
-            nome: document.querySelector("#nome").value,
-            cpf: document.querySelector("#CPF").value,
-            email: document.querySelector("#email").value,
-            endereco: document.querySelector("#endereco").value,
-            numero_tel: document.querySelector("#numero_tel").value,
-            pessoa_contato: document.querySelector("#pessoa_contato").value,
-            cargo: document.querySelector("#cargo").options[document.querySelector("#cargo").selectedIndex].value,
-            data: document.querySelector("#data").value,
-            remuneracao: document.querySelector("#remuneracao").value,
-            observacoes: document.querySelector("#observacoes").value,
-            foto: document.querySelector("#foto").value //aqui será guardado apenas o endereço local do arquivo
+        if (document.querySelector("#nome").value.length == 0) {
+            alert("Verifique os dados e tente novamente.")
+        } else {
+            let funcionario_dados = {
+                nome: document.querySelector("#nome").value,
+                cpf: document.querySelector("#CPF").value,
+                email: document.querySelector("#email").value,
+                endereco: document.querySelector("#endereco").value,
+                numero_tel: document.querySelector("#numero_tel").value,
+                pessoa_contato: document.querySelector("#pessoa_contato").value,
+                cargo: document.querySelector("#cargo").options[document.querySelector("#cargo").selectedIndex].value,
+                data: document.querySelector("#data").value,
+                remuneracao: document.querySelector("#remuneracao").value,
+                observacoes: document.querySelector("#observacoes").value,
+                foto: document.querySelector("#foto").value //aqui será guardado apenas o endereço local do arquivo
+            }
+            localStorage.setItem("Cadastro",JSON.stringify(funcionario_dados))
+            alert("Dados Cadastrados")
+            form.reset();
         }
-        localStorage.setItem("Cadastro",JSON.stringify(funcionario_dados))
-        alert("Dados Cadastrados")
-        form.reset();
     })
 
     //consultar
