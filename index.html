@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="E-mail" class="col-md-2">Email:</label>
-                    <input type="text" id="email" class="col-md-10" placeholder="Digite o E-mail do Funcionário">
+                    <input type="email" id="email" class="col-md-10" placeholder="Digite o E-mail do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Endereço" class="col-md-2">Endereço:</label>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="Número de Telefone"class="col-md-2">Número de Telefone:</label>
-                    <input type="text" id="numero" class="col-md-10" placeholder="Digite o número de telefone do Funcionário">
+                    <input type="number" id="numero_tel" class="col-md-10" placeholder="Digite o número de telefone do Funcionário">
                 </div>
                 <div class="form-group row">
                     <label for="Pessoa de contato" class="col-md-2">Pessoa de contato:</label>
@@ -70,15 +70,15 @@
                 </div>
                 <div class="form-group row">
                     <label for="foto" class="col-md-2">Foto de funcionário:</label>
-                    <input type="file" id="foto" class="col-md-10">
+                    <input type="file" id="foto" class="col-md-10" accept="image/png, image/jpeg">
                 </div>
-                <input type="button" class="btn btn-primary" id="cadastrar" value="Cadastrar">
-                <input type="button" class="btn btn-primary" id="consultar" value="Consultar">
+                <button type="submit" class="btn btn-primary" id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" id="consultar" onclick="consultar()">Consultar</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>Site criado por <a href=""> &copy;David</a> , <a href="">&copy;Andrade</a> , <a href="">&copy;Yago</a></p>
+        <p>Site criado por <a href="https://github.com/Gabriel-032" target="_blank">Andrade</a> | <a href="https://github.com/lordaval" target="_blank" >David</a> | <a href="https://github.com/BalkMasterYD"target="_blank">Yago</a></p>
     </footer>   
     
     <!--
@@ -86,5 +86,7 @@
         Cirurgião Geral
         Enfermeiro
     -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
