@@ -13,11 +13,10 @@
 <body>
     <header>
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar navbar-expand-lg" id="nav_link" href="#">
+            <a class="nav_link navbar navbar-expand-lg" href="#">
                 <img src="imagens/logo-full_size.jpeg" id="imagem_header" class="navbar-brand d-inline-block align-top" alt="logo da empresa">
                 Caxias Online Medical Group
             </a>
-
         </nav>
     </header>
     <main>
@@ -34,7 +33,7 @@
                 </div>
                 <div class="form-group row">
                     <label for="CPF" class="col-md-2">CPF:</label>
-                    <input type="number" id="CPF" class="col-md-10" placeholder="Digite o CPF do Funcionário" autocomplete="off" maxlength="14">
+                    <input type="text" id="CPF" class="col-md-10" placeholder="Digite o CPF do Funcionário" autocomplete="off" maxlength="14">
                 </div>
                 <div class="form-group row">
                     <label for="E-mail" class="col-md-2">Email:</label>
@@ -54,7 +53,14 @@
                 </div>
                 <div class="form-group row">
                     <label for="Cargo" class="col-md-2">Cargo:</label>
-                    <input type="text" id="cargo" class="col-md-10" placeholder="Digite o cargo do Funcionário">
+                    <select  id="cargo" class="col-md-10" placeholder="Digite o cargo do Funcionário">
+                        <option selected>Cirurgião</option>
+                        <option>Enfermeiro</option>
+                        <option>Fisioterapeuta</option>
+                        <option>Gerente de estoque</option>
+                        <option>Gerente financeiro</option>
+                        <option>Psicóloga</option>
+                    </select>
                 </div>
                 <div class="form-group row">
                     <label for="data" class="col-md-2">Data de admissão:</label>
@@ -72,8 +78,8 @@
                     <label for="foto" class="col-md-2">Foto de funcionário:</label>
                     <input type="file" id="foto" class="col-md-10" accept="image/png, image/jpeg">
                 </div>
-                <button type="submit" class="btn btn-primary" id="cadastrar" onclick="cadastrar()">Cadastrar</button>
-                <button type="submit" class="btn btn-primary" id="consultar" onclick="consultar()">Consultar</button>
+                <button type="submit" class="btn btn-primary" id="cadastrar">Cadastrar</button>
+                <button type="submit" class="btn btn-primary" id="consultar">Consultar</button>
             </form>
         </section>
     </main>
@@ -83,8 +89,13 @@
     
     <!--
         Cargos:
-        Cirurgião Geral
-        Enfermeiro
+        <option>Cirurgião</option>
+        <option>Enfermeiro/<option>
+        <option>Fisioterapeuta</option>
+        <option>Gerente de estoque</option>
+        <option>Gerente financeiro/<option>
+        <option>Psicóloga</option>
+
     -->
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="script.js"></script>

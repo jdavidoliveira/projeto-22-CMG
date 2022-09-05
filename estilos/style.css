@@ -20,12 +20,12 @@ header {
     width: 100px;
 }
 
-a#nav_link {
+a.nav_link {
     font-size: 20px;
     color: var(--cor1);
 }
 
-a#nav_link:hover {
+a.nav_link:hover {
     color: var(--cor1);
     text-decoration: none;
 }

@@ -3,20 +3,18 @@ $(document).ready(function(){
 
     let cadastrar_button = document.querySelector("button#cadastrar");
     let consultar_button = document.querySelector("button#consultar");
-
-    let nome = document.querySelector("#nome").value
-    let cpf = document.querySelector("#CPF").value
-    let email = document.querySelector("#email").value
-    let endereco= document.querySelector("#endereco").value
-    let numero_tel = document.querySelector("#numero_tel").value
-    let pessoa_contato = document.querySelector("#pessoa_contato").value
-    let cargo = document.querySelector("#cargo").value
-    let data = document.querySelector("#data").value                       
-    let remuneracao = document.querySelector("#remuneracao").value
-    let observacoes = document.querySelector("#observacoes").value
-    let foto = document.querySelector("#foto").value
-
-
+    
+    //Mascara pro CPF
+    let campo_cpf = document.querySelector("#CPF")
+    campo_cpf.addEventListener("keypress", function(){
+        if (campo_cpf.value.length === 3) {
+            campo_cpf.value += "."
+        } else if (campo_cpf.value.length === 7) {
+            campo_cpf.value += "."
+        } else if (campo_cpf.value.length === 11) {
+            campo_cpf.value += "-"
+        }
+    })
     //cadastrar 
     cadastrar_button.addEventListener("click", function(e){
         e.preventDefault();
@@ -27,32 +25,37 @@ $(document).ready(function(){
             endereco: document.querySelector("#endereco").value,
             numero_tel: document.querySelector("#numero_tel").value,
             pessoa_contato: document.querySelector("#pessoa_contato").value,
-            cargo: document.querySelector("#cargo").value,
+            cargo: document.querySelector("#cargo").options[document.querySelector("#cargo").selectedIndex].value,
             data: document.querySelector("#data").value,
             remuneracao: document.querySelector("#remuneracao").value,
             observacoes: document.querySelector("#observacoes").value,
             foto: document.querySelector("#foto").value //aqui será guardado apenas o endereço local do arquivo
         }
         localStorage.setItem("Cadastro",JSON.stringify(funcionario_dados))
+        alert("Dados Cadastrados")
         form.reset();
     })
 
     //consultar
     consultar_button.addEventListener("click", function(e){
         e.preventDefault();
-        funcionario_dados = localStorage.getItem("Cadastro")
-        document.querySelector("#nome").value = 
-        document.querySelector("#CPF").value
-        document.querySelector("#email").value
-        document.querySelector("#endereco").value
-        document.querySelector("#numero_tel").value
-        document.querySelector("#pessoa_contato").value
-        document.querySelector("#cargo").value
-        document.querySelector("#data").value                       
-        document.querySelector("#remuneracao").value
-        document.querySelector("#observacoes").value
-        document.querySelector("#foto").value
-
+        if (localStorage.getItem("Cadastro") == null) {
+            alert("Nenhum dado cadastrado!")
+        } else {
+            let dados_json = localStorage.getItem("Cadastro")
+            funcionario_dados = JSON.parse(localStorage.getItem("Cadastro"))
+            document.querySelector("#nome").value = funcionario_dados.nome
+            document.querySelector("#CPF").value = funcionario_dados.cpf
+            document.querySelector("#email").value = funcionario_dados.email
+            document.querySelector("#endereco").value = funcionario_dados.endereco
+            document.querySelector("#numero_tel").value = funcionario_dados.numero_tel
+            document.querySelector("#pessoa_contato").value = funcionario_dados.pessoa_contato
+            document.querySelector("#cargo").value = funcionario_dados.cargo
+            document.querySelector("#data").value = funcionario_dados.data
+            document.querySelector("#remuneracao").value = funcionario_dados.remuneracao
+            document.querySelector("#observacoes").value = funcionario_dados.observacoes
+            document.querySelector("#foto").value = funcionario_dados.foto
+        }
 
 
 
