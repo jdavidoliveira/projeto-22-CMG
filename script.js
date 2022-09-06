@@ -20,6 +20,8 @@ $(document).ready(function(){
         e.preventDefault();
         if (document.querySelector("#nome").value.length == 0) {
             alert("Verifique os dados e tente novamente.")
+        } else if(!document.querySelector("#termos").checked) {
+            alert("Aceite os termos de uso.")
         } else {
             let funcionario_dados = {
                 nome: document.querySelector("#nome").value,
